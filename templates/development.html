@@ -1,0 +1,226 @@
+{% extends "layout2.html" %}
+{% block body %}
+
+	
+
+		<div class="banner-info">
+			<div class="banner-info-left">
+				<h3>OUR MISSION IS TO MAKE YOUR <span> BUSINESS GROW</span></h3>
+				<p>Donec rutrum congue leo eget malesuada<span>Curabitur non nulla sit amet.</span></p>
+				<div class="start">
+					<a href="#">Learn More...</a>
+				</div>
+			</div>
+			<div class="banner-info-right">
+				<div class="banner-info-fig">
+					<a href="{{ url_for('static', filename='images/4.jpg') }}" class="b-link-stripe b-animate-go   swipebox"  title="">
+						<img class="img-responsive" src="{{ url_for('static', filename='images/4-.jpg') }}" />
+					</a>
+				</div>
+				<div class="banner-info-fig">
+					<a href="{{ url_for('static', filename='images/5.jpg') }}" class="b-link-stripe b-animate-go   swipebox"  title="">
+						<img class="img-responsive" src="{{ url_for('static', filename='images/5-.jpg') }}" />
+					</a>
+				</div>
+				<div class="clearfix"> </div>
+				<div class="banner-info-fig">
+					<a href="{{ url_for('static', filename='images/6.jpg') }}" class="b-link-stripe b-animate-go   swipebox"  title="">
+						<img class="img-responsive" src="{{ url_for('static', filename='images/6-.jpg') }}" />
+					</a>
+				</div>
+				<div class="banner-info-fig">
+					<a href="{{ url_for('static', filename='images/7.jpg') }}" class="b-link-stripe b-animate-go   swipebox"  title="">
+						<img class="img-responsive" src="{{ url_for('static', filename='images/7-.jpg') }}" />
+					</a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/swipebox.css') }}">
+				<script src="{{ url_for('static', filename='js/jquery.swipebox.min.js') }}"></script>
+					<script type="text/javascript">
+						jQuery(function($) {
+							$(".swipebox").swipebox();
+						});
+					</script>
+
+				<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.mixitup.min.js') }}"></script>
+					<script type="text/javascript">
+					$(function () {
+						var filterList = {
+							init: function () {
+								// MixItUp plugin
+							// http://mixitup.io
+							$('#portfoliolist').mixitup({
+								targetSelector: '.portfolio',
+								filterSelector: '.filter',
+								effects: ['fade'],
+								easing: 'snap',
+								// call the hover effect
+								onMixEnd: filterList.hoverEffect()
+							});	
+						},
+						hoverEffect: function () {
+							// Simple parallax effect
+							$('#portfoliolist .portfolio').hover(
+								function () {
+									$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+									$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+								},
+								function () {
+									$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+									$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+								}		
+							);				
+						}
+					};
+					// Run the show!
+						filterList.init();
+					});	
+					</script>
+	</div>
+	</div>
+	<div class="banner-bottom">
+	<div class="container">
+
+				<script src="{{ url_for('static', filename='js/responsiveslides.min.js') }}"></script>
+				 <script>
+				    // You can also use "$(window).load(function() {"
+				    $(function () {
+				      // Slideshow 4
+				      $("#slider3").responsiveSlides({
+				        auto: true,
+				        pager: true,
+				        nav: false,
+				        speed: 500,
+				        namespace: "callbacks",
+				        before: function () {
+				          $('.events').append("<li>before event fired.</li>");
+				        },
+				        after: function () {
+				          $('.events').append("<li>after event fired.</li>");
+				        }
+				      });
+				
+				    });
+				  </script>
+			<div  id="top" class="callbacks_container">
+
+	<div id="products" class="portfolio">
+	<div class="container">
+
+	<div class="portfolios entertain_box  wow fadeInUp" data-wow-delay="0.4s" id="project">
+			<div class="portfolio-info">
+				<h3>GALLERY</h3>
+				<p class="para">Curabitur aliquet quam id dui posuere blandit.
+					<span>Nulla Quis lorum nisl tempus convallis quis ac lactus
+					porttitor accumsan tincidunt.</span></p>
+				<div class="strip"> </div>
+			</div>
+					<ul id="filters" class="clearfix">
+							<li><span class="filter" data-filter="icon"><a href="index">ALL</a></span></li>
+							<li><span class="filter" data-filter="app"><a href="seed">SEEDS</a></span></li>
+							<li><span class="filter" data-filter="card"><a href="crop">CROPING</a></span></li>
+							<li><span class="filter active" data-filter="app card icon web"><a href="development">DEVELOPMENT</a></span></li>
+					</ul>
+		
+					
+						<div id="portfoliolist">
+						<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="{{ url_for('static', filename='images/s-5.jpg') }}" class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive" src="{{ url_for('static', filename='images/s-55.jpg') }}" />
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive" src="{{ url_for('static', filename='images/plus.png') }}" class="zoom" alt=""/>
+								</h2>
+								</div></a>
+							</div>
+						</div>				
+						<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="{{ url_for('static', filename='images/s-6.jpg') }}" class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive" src="{{ url_for('static', filename='images/s-66.jpg') }}" />
+								<div class="b-wrapper">
+									<h2 class="b-animate b-from-left    b-delay03 ">
+										<img class="img-responsive" src="{{ url_for('static', filename='images/plus.png') }}" class="zoom" alt=""/>
+									</h2>
+								</div></a>
+							</div>
+						</div>
+
+						<div class="portfolio web mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="{{ url_for('static', filename='images/s-5.jpg') }}" class="b-link-stripe b-animate-go   swipebox"  title="">
+								<img class="img-responsive" src="{{ url_for('static', filename='images/s-55.jpg') }}" />
+								<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive" src="{{ url_for('static', filename='images/plus.png') }}" class="zoom" alt=""/>
+								</h2>						
+								</div></a>
+							</div>
+						</div>			
+						<div class="portfolio web mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+							<div class="portfolio-wrapper">		
+								<a href="{{ url_for('static', filename='images/s-6.jpg') }}" class="b-link-stripe b-animate-go  swipebox"  title="">
+								<img class="img-responsive" src="{{ url_for('static', filename='images/s-66.jpg') }}" />
+								<div class="b-wrapper">
+									<h2 class="b-animate b-from-left    b-delay03 ">
+										<img class="img-responsive" src="{{ url_for('static', filename='images/plus.png') }}" class="zoom" alt=""/>
+									</h2>					
+								</div></a>							
+							</div>
+						</div>
+					<div class="clearfix"></div>
+					</div>
+		
+	</div>
+			<link rel="stylesheet" href="{{ url_for('static', filename='css/swipebox.css') }}">
+				<script src="{{ url_for('static', filename='js/jquery.swipebox.min.js') }}"></script>
+					<script type="text/javascript">
+						jQuery(function($) {
+							$(".swipebox").swipebox();
+						});
+					</script>
+				<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.mixitup.min.js') }}"></script>
+					<script type="text/javascript">
+					$(function () {
+						var filterList = {
+							init: function () {
+								// MixItUp plugin
+							// http://mixitup.io
+							$('#portfoliolist').mixitup({
+								targetSelector: '.portfolio',
+								filterSelector: '.filter',
+								effects: ['fade'],
+								easing: 'snap',
+								// call the hover effect
+								onMixEnd: filterList.hoverEffect()
+							});	
+						},
+						hoverEffect: function () {
+							// Simple parallax effect
+							$('#portfoliolist .portfolio').hover(
+								function () {
+									$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+									$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+								},
+								function () {
+									$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+									$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+								}		
+							);				
+						}
+					};
+					// Run the show!
+						filterList.init();
+					});	
+					</script>
+	</div>
+	</div>
+
+		</div>
+	</div>
+	</div>
+	{% endblock %}

@@ -1,0 +1,710 @@
+{% extends "layout.html" %}
+{% block body %}
+ 	
+
+
+		<div class="banner-info">
+	<div class="banner-info-left">
+		<h3>OUR MISSION IS TO MAKE YOUR <span> BUSINESS GROW</span></h3>
+		<p>Donec rutrum congue leo eget malesuada<span>Curabitur non nulla sit amet.</span></p>
+		<div class="start">
+			<a href="#">Learn More...</a>
+		</div>
+	</div>
+	<div class="banner-info-right">
+		<div class="banner-info-fig">
+			<a href="{{ url_for('static', filename='images/4.jpg') }}" class="b-link-stripe b-animate-go   swipebox"
+				title="">
+				<img class="img-responsive" src="{{ url_for('static', filename='images/4-.jpg') }}" />
+			</a>
+		</div>
+		<div class="banner-info-fig">
+			<a href="{{ url_for('static', filename='images/5.jpg') }}" class="b-link-stripe b-animate-go   swipebox"
+				title="">
+				<img class="img-responsive" src="{{ url_for('static', filename='images/5-.jpg') }}" />
+			</a>
+		</div>
+		<div class="clearfix"> </div>
+		<div class="banner-info-fig">
+			<a href="{{ url_for('static', filename='images/6.jpg') }}" class="b-link-stripe b-animate-go   swipebox"
+				title="">
+				<img class="img-responsive" src="{{ url_for('static', filename='images/6-.jpg') }}" />
+			</a>
+		</div>
+		<div class="banner-info-fig">
+			<a href="{{ url_for('static', filename='images/7.jpg') }}" class="b-link-stripe b-animate-go   swipebox"
+				title="">
+				<img class="img-responsive" src="{{ url_for('static', filename='images/7-.jpg') }}" />
+			</a>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	<div class="clearfix"> </div>
+</div>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/swipebox.css') }}">
+<script src="{{ url_for('static', filename='js/jquery.swipebox.min.js') }}"></script>
+<script type="text/javascript">
+	jQuery(function ($) {
+		$(".swipebox").swipebox();
+	});
+</script>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.mixitup.min.js') }}"></script>
+<script type="text/javascript">
+	$(function () {
+		var filterList = {
+			init: function () {
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});
+			},
+			hoverEffect: function () {
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({
+							bottom: 0
+						}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({
+							top: -30
+						}, 500, 'easeOutQuad');
+					},
+					function () {
+						$(this).find('.label').stop().animate({
+							bottom: -40
+						}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({
+							top: 0
+						}, 300, 'easeOutQuad');
+					}
+				);
+			}
+		};
+		// Run the show!
+		filterList.init();
+	});
+</script>
+</div>
+</div>
+<div class="banner-bottom">
+	<div class="container">
+
+		<script src="{{ url_for('static', filename='js/responsiveslides.min.js') }}"></script>
+		<script>
+			// You can also use "$(window).load(function() {"
+			$(function () {
+				// Slideshow 4
+				$("#slider3").responsiveSlides({
+					auto: true,
+					pager: true,
+					nav: false,
+					speed: 500,
+					namespace: "callbacks",
+					before: function () {
+						$('.events').append("<li>before event fired.</li>");
+					},
+					after: function () {
+						$('.events').append("<li>after event fired.</li>");
+					}
+				});
+
+			});
+		</script>
+		<div id="top" class="callbacks_container">
+			<ul class="rslides" id="slider3">
+				<li>
+					<div class="banner-bottom-info">
+						<h3>OUR BEGINING</h3>
+						<p>Donec rutrum congue leo eget malesuada.Curabitur non nulla sit amet
+							nisl tempus convallis quis ac lactus.Sed porttitor lactus nibh.Proin
+							eget tortor risus.Nulla porttitor accumsan tincidunt.Nulla
+							porttitoraccumsan tincidunt.
+							Curabitur aliquet quam id dui posuere blandit.
+							Nulla Quis lorum nisl tempus convallis quis ac lactus.Sed porttitorlactus nibh
+							eget tortor risus.Nulla porttitor accumsan tincidunt.</p>
+					</div>
+				</li>
+				<li>
+					<div class="banner-bottom-info">
+						<h3>OUR PROCESSING</h3>
+						<p>Nulla porttitor congue leo eget malesuada.Curabitur non nulla sit amet
+							nisl tempus convallis quis ac lactus.Sed porttitor lactus nibh.Proin
+							eget tortor risus.Nulla porttitor accumsan tincidunt.Nulla
+							porttitoraccumsan tincidunt.
+							Curabitur aliquet quam id dui posuere blandit.
+							Nulla Quis lorum nisl tempus convallis quis ac lactus.Sed porttitorlactus nibh
+							eget tortor risus.Nulla porttitor accumsan tincidunt.</p>
+					</div>
+				</li>
+				<li>
+					<div class="banner-bottom-info">
+						<h3>OUR REQUIREMENT</h3>
+						<p>Curabitur rutrum congue leo eget malesuada.Curabitur non nulla sit amet
+							nisl tempus convallis quis ac lactus.Sed porttitor lactus nibh.Proin
+							eget tortor risus.Nulla porttitor accumsan tincidunt.Nulla
+							porttitoraccumsan tincidunt.
+							Curabitur aliquet quam id dui posuere blandit.
+							Nulla Quis lorum nisl tempus convallis quis ac lactus.Sed porttitorlactus nibh
+							eget tortor risus.Nulla porttitor accumsan tincidunt.</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="port">
+			<a href="#products" class="scroll">See Gallery</a>
+		</div>
+	</div>
+</div>
+<div id="about" class="about">
+	<div class="container">
+		<h3>ABOUT US</h3>
+		<p class="para">Curabitur aliquet quam id dui posuere blandit.
+			<span>Nulla Quis lorum nisl tempus convallis quis ac lactus porttitor accumsan tincidunt.</span></p>
+		<div class="about-grids">
+			<script src="{{ url_for('static', filename='js/responsiveslides.min.js') }}"></script>
+			<script>
+				// You can also use "$(window).load(function() {"
+				$(function () {
+					// Slideshow 4
+					$("#slider2").responsiveSlides({
+						auto: true,
+						pager: false,
+						nav: false,
+						speed: 500,
+						namespace: "callbacks",
+						before: function () {
+							$('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+							$('.events').append("<li>after event fired.</li>");
+						}
+					});
+
+				});
+			</script>
+			<div class="callbacks_container">
+				<ul class="rslides" id="slider2">
+					<li>
+						<div class="about-grids">
+							<div class="about-grid">
+								<a href="#small-dialog"
+									class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<img src="{{ url_for('static', filename='images/2.jpg') }}"
+										class="img-responsive" />
+									<h4>Tempus convallis quis lactus porttitor</h4>
+								</a>
+
+								<p>Sed porttitor lactus nibh.Proin
+									eget tortor risus.Nulla porttitor accumsan tincidunt.Nulla
+									porttitoraccumsan tincidunt.
+									Curabitur aliquet quam id dui posuere blandit.
+									Nulla Quis lorum nisl tempus convallis quis ac lactus porttitor accumsan tincidunt.
+								</p>
+							</div>
+							<div class="about-grid">
+								<a href="#small-dialog1"
+									class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<img src="{{ url_for('static', filename='images/1.jpg') }}"
+										class="img-responsive" />
+									<h4>Tempus convallis quis lactus porttitor</h4>
+								</a>
+
+								<p>Sed porttitor lactus nibh.Proin
+									eget tortor risus.Nulla porttitor accumsan tincidunt.Nulla
+									porttitoraccumsan tincidunt.
+									Curabitur aliquet quam id dui posuere blandit.
+									Nulla Quis lorum nisl tempus convallis quis ac lactus porttitor accumsan tincidunt.
+								</p>
+							</div>
+							<div class="about-grid">
+								<a href="#small-dialog2"
+									class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<img src="{{ url_for('static', filename='images/3.jpg') }}"
+										class="img-responsive" />
+									<h4>Tempus convallis quis lactus porttitor</h4>
+								</a>
+
+								<p>Sed porttitor lactus nibh.Proin
+									eget tortor risus.Nulla porttitor accumsan tincidunt.Nulla
+									porttitoraccumsan tincidunt.
+									Curabitur aliquet quam id dui posuere blandit.
+									Nulla Quis lorum nisl tempus convallis quis ac lactus porttitor accumsan tincidunt.
+								</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</li>
+					<li>
+						<div class="about-grids">
+							<div class="about-grid">
+								<a href="#small-dialog3"
+									class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<img src="{{ url_for('static', filename='images/3.jpg') }}"
+										class="img-responsive" />
+									<h4>Nulla convallis quis lactus porttitor</h4>
+								</a>
+
+								<p>Quam porttitor lactus nibh.Proin
+									eget tortor risus.Nulla porttitor accumsan tincidunt.Nulla
+									porttitoraccumsan tincidunt.
+									Curabitur aliquet quam id dui posuere blandit.
+									Nulla Quis lorum nisl tempus convallis quis ac lactus porttitor accumsan tincidunt.
+								</p>
+							</div>
+							<div class="about-grid">
+								<a href="#small-dialog4"
+									class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<img src="{{ url_for('static', filename='images/2.jpg') }}"
+										class="img-responsive" />
+									<h4>Aliquet convallis quis lactus porttitor</h4>
+								</a>
+
+								<p>Dui porttitor lactus nibh.Proin
+									eget tortor risus.Nulla porttitor accumsan tincidunt.Nulla
+									porttitoraccumsan tincidunt.
+									Curabitur aliquet quam id dui posuere blandit.
+									Nulla Quis lorum nisl tempus convallis quis ac lactus porttitor accumsan tincidunt.
+								</p>
+							</div>
+							<div class="about-grid">
+								<a href="#small-dialog5"
+									class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<img src="{{ url_for('static', filename='images/1.jpg') }}"
+										class="img-responsive" />
+									<h4>Posuere convallis quis lactus porttitor</h4>
+								</a>
+
+								<p>Quis porttitor lactus nibh.Proin
+									eget tortor risus.Nulla porttitor accumsan tincidunt.Nulla
+									porttitoraccumsan tincidunt.
+									Curabitur aliquet quam id dui posuere blandit.
+									Nulla Quis lorum nisl tempus convallis quis ac lactus porttitor accumsan tincidunt.
+								</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</li>
+					<li>
+						<div class="about-grids">
+							<div class="about-grid">
+								<a href="#small-dialog6"
+									class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<img src="{{ url_for('static', filename='images/1.jpg') }}"
+										class="img-responsive" />
+									<h4>Risus convallis quis lactus porttitor</h4>
+								</a>
+
+								<p>Sed porttitor lactus nibh.Proin
+									eget tortor risus.Nulla porttitor accumsan tincidunt.Nulla
+									porttitoraccumsan tincidunt.
+									Curabitur aliquet quam id dui posuere blandit.
+									Nulla Quis lorum nisl tempus convallis quis ac lactus porttitor accumsan tincidunt.
+								</p>
+							</div>
+							<div class="about-grid">
+								<a href="#small-dialog7"
+									class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<img src="{{ url_for('static', filename='images/2.jpg') }}"
+										class="img-responsive" />
+									<h4>Tortor convallis quis lactus porttitor</h4>
+								</a>
+
+								<p>Sed porttitor lactus nibh.Proin
+									eget tortor risus.Nulla porttitor accumsan tincidunt.Nulla
+									porttitoraccumsan tincidunt.
+									Curabitur aliquet quam id dui posuere blandit.
+									Nulla Quis lorum nisl tempus convallis quis ac lactus porttitor accumsan tincidunt.
+								</p>
+							</div>
+							<div class="about-grid">
+								<a href="#small-dialog8"
+									class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+									<img src="{{ url_for('static', filename='images/3.jpg') }}"
+										class="img-responsive" />
+									<h4>Porttitor convallis quis lactus porttitor</h4>
+								</a>
+
+								<p>Sed porttitor lactus nibh.Proin
+									eget tortor risus.Nulla porttitor accumsan tincidunt.Nulla
+									porttitoraccumsan tincidunt.
+									Curabitur aliquet quam id dui posuere blandit.
+									Nulla Quis lorum nisl tempus convallis quis ac lactus porttitor accumsan tincidunt.
+								</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<script type="text/javascript" src="{{ url_for('static', filename='js/modernizr.custom.min.js') }}">
+			</script>
+			<link href="{{ url_for('static', filename='css/popuo-box.css') }}" rel="stylesheet" type="text/css"
+				media="all" />
+			<script src="{{ url_for('static', filename='js/jquery.magnific-popup.js') }}" type="text/javascript">
+			</script>
+
+			<div id="small-dialog" class="mfp-hide">
+				<div class="image-top">
+					<img src="{{ url_for('static', filename='images/2-.jpg') }}" alt="" />
+				</div>
+			</div>
+			<div id="small-dialog1" class="mfp-hide">
+				<div class="image-top">
+					<img src="{{ url_for('static', filename='images/1-.jpg') }}" alt="" />
+				</div>
+			</div>
+			<div id="small-dialog2" class="mfp-hide">
+				<div class="image-top">
+					<img src="{{ url_for('static', filename='images/3-.jpg') }}" alt="" />
+				</div>
+			</div>
+			<div id="small-dialog3" class="mfp-hide">
+				<div class="image-top">
+					<img src="{{ url_for('static', filename='images/3-.jpg') }}" alt="" />
+				</div>
+			</div>
+			<div id="small-dialog4" class="mfp-hide">
+				<div class="image-top">
+					<img src="{{ url_for('static', filename='images/2-.jpg') }}" alt="" />
+				</div>
+			</div>
+			<div id="small-dialog5" class="mfp-hide">
+				<div class="image-top">
+					<img src="{{ url_for('static', filename='images/1-.jpg') }}" alt="" />
+				</div>
+			</div>
+			<div id="small-dialog6" class="mfp-hide">
+				<div class="image-top">
+					<img src="{{ url_for('static', filename='images/1-.jpg') }}" alt="" />
+				</div>
+			</div>
+			<div id="small-dialog7" class="mfp-hide">
+				<div class="image-top">
+					<img src="{{ url_for('static', filename='images/2-.jpg') }}" alt="" />
+				</div>
+			</div>
+			<div id="small-dialog8" class="mfp-hide">
+				<div class="image-top">
+					<img src="{{ url_for('static', filename='images/3-.jpg') }}" alt="" />
+				</div>
+			</div>
+			<script>
+				$(document).ready(function () {
+					$('.popup-with-zoom-anim').magnificPopup({
+						type: 'inline',
+						fixedContentPos: false,
+						fixedBgPos: true,
+						overflowY: 'auto',
+						closeBtnInside: true,
+						preloader: false,
+						midClick: true,
+						removalDelay: 300,
+						mainClass: 'my-mfp-zoom-in'
+					});
+
+				});
+			</script>
+			<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.mixitup.min.js') }}"></script>
+			<script type="text/javascript">
+				$(function () {
+
+					var filterList = {
+
+						init: function () {
+
+							// MixItUp plugin
+							// http://mixitup.io
+							$('#portfoliolist').mixitup({
+								targetSelector: '.portfolio',
+								filterSelector: '.filter',
+								effects: ['fade'],
+								easing: 'snap',
+								// call the hover effect
+								onMixEnd: filterList.hoverEffect()
+							});
+
+						},
+
+						hoverEffect: function () {
+
+							// Simple parallax effect
+							$('#portfoliolist .portfolio').hover(
+								function () {
+									$(this).find('.label').stop().animate({
+										bottom: 0
+									}, 200, 'easeOutQuad');
+									$(this).find('img').stop().animate({
+										top: -30
+									}, 500, 'easeOutQuad');
+								},
+								function () {
+									$(this).find('.label').stop().animate({
+										bottom: -40
+									}, 200, 'easeInQuad');
+									$(this).find('img').stop().animate({
+										top: 0
+									}, 300, 'easeOutQuad');
+								}
+							);
+
+						}
+
+					};
+
+					// Run the show!
+					filterList.init();
+
+
+				});
+			</script>
+		</div>
+	</div>
+</div>
+<div id="pricing" class="pricing">
+	<div class="container">
+		<div class="price">
+			<h3>PRICING</h3>
+			<p class="para">Curabitur aliquet quam id dui posuere blandit.
+				<span>Nulla Quis lorum nisl tempus convallis quis ac lactus
+					porttitor accumsan tincidunt.</span></p>
+		</div>
+		<div class="basic">
+			<div class="business">
+				<h2>All</h2>
+				<p>All products</p>
+			</div>
+			<div class="value">
+				<p>99,99$</p>
+			</div>
+			<ul>
+				<li><span>2 types of</span> Seeds</li>
+				<li><span>4 types of</span> Crops</li>
+				<li><span>All</span> Crops & Seeds</li>
+				<li><span>Full</span> Support</li>
+				<li class="gd"><span>24h</span> Ready</li>
+			</ul>
+			<div class="buy-me">
+				<a href="checkout">Buy Me</a>
+			</div>
+		</div>
+		<div class="basic basic-mid">
+			<div class="business">
+				<h2>Crops</h2>
+				<p>Best Crops</p>
+			</div>
+			<div class="value">
+				<p>49,99$</p>
+			</div>
+			<ul>
+
+				<li><span>4</span> Types</li>
+				<li><span>Full</span> Support</li>
+				<li class="gd"><span>24h</span> Ready</li>
+			</ul>
+			<div class="buy-me">
+				<a href="checkout">Buy Me</a>
+			</div>
+		</div>
+		<div class="basic">
+			<div class="business">
+				<h2>Seeds</h2>
+				<p>Best seeds</p>
+			</div>
+			<div class="value">
+				<p>19,99$</p>
+			</div>
+			<ul>
+
+				<li><span>2</span> Types</li>
+				<li><span>Full</span> Support</li>
+				<li class="gd"><span>24h</span> Ready</li>
+			</ul>
+			<div class="buy-me">
+				<a href="checkout">Buy Me</a>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+</div>
+<div id="products" class="portfolio">
+	<div class="container">
+
+		<div class="portfolios entertain_box  wow fadeInUp" data-wow-delay="0.4s" id="project">
+			<div class="portfolio-info">
+				<h3>GALLERY</h3>
+				<p class="para">Curabitur aliquet quam id dui posuere blandit.
+					<span>Nulla Quis lorum nisl tempus convallis quis ac lactus
+						porttitor accumsan tincidunt.</span></p>
+				<div class="strip"> </div>
+			</div>
+			<ul id="filters" class="clearfix">
+				<li><span class="filter active" data-filter="app card icon web"><a href="index">ALL</a></span></li>
+				<li><span class="filter" data-filter="app"><a href="seed">SEEDS</a></span></li>
+				<li><span class="filter" data-filter="card"><a href="crop">CROPING</a></span></li>
+				<li><span class="filter" data-filter="icon"><a href="development">DEVELOPMENT</a></span></li>
+			</ul>
+
+			<div id="portfoliolist">
+				<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+					<div class="portfolio-wrapper">
+						<a href="{{ url_for('static', filename='images/seed1.jpg') }}"
+							class="b-link-stripe b-animate-go   swipebox" title="">
+							<img class="img-responsive" src="{{ url_for('static', filename='images/seed1.jpg') }}" />
+							<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive"
+										src="{{ url_for('static', filename='images/plus.png') }}" class="zoom" alt="" />
+								</h2>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+					<div class="portfolio-wrapper">
+						<a href="{{ url_for('static', filename='images/s-2.jpg') }}"
+							class="b-link-stripe b-animate-go   swipebox" title="">
+							<img class="img-responsive" src="{{ url_for('static', filename='images/s-22.jpg') }}" />
+							<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive"
+										src="{{ url_for('static', filename='images/plus.png') }}" class="zoom" alt="" />
+								</h2>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+					<div class="portfolio-wrapper">
+						<a href="{{ url_for('static', filename='images/s-3.jpg') }}"
+							class="b-link-stripe b-animate-go   swipebox" title="">
+							<img class="img-responsive" src="{{ url_for('static', filename='images/s-33.jpg') }}" />
+							<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive"
+										src="{{ url_for('static', filename='images/plus.png') }}" class="zoom" alt="" />
+								</h2>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+					<div class="portfolio-wrapper">
+						<a href="images/crops.jpg" class="b-link-stripe b-animate-go   swipebox" title="">
+							<img class="img-responsive" src="{{ url_for('static', filename='images/crops.jpg') }}" />
+							<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive"
+										src="{{ url_for('static', filename='images/plus.png') }}" class="zoom" alt="" />
+								</h2>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="portfolio web mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+					<div class="portfolio-wrapper">
+						<a href="{{ url_for('static', filename='images/seed2.jpg') }}"
+							class="b-link-stripe b-animate-go   swipebox" title="">
+							<img class="img-responsive" src="{{ url_for('static', filename='images/seed2.jpg') }}" />
+							<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive"
+										src="{{ url_for('static', filename='images/plus.png') }}" class="zoom" alt="" />
+								</h2>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="portfolio web mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+					<div class="portfolio-wrapper">
+						<a href="{{ url_for('static', filename='images/seed3.jpg') }}"
+							class="b-link-stripe b-animate-go  swipebox" title="">
+							<img class="img-responsive" src="{{ url_for('static', filename='images/seed3.jpg') }}" />
+							<div class="b-wrapper">
+								<h2 class="b-animate b-from-left    b-delay03 ">
+									<img class="img-responsive"
+										src="{{ url_for('static', filename='images/plus.png') }}" class="zoom" alt="" />
+								</h2>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/swipebox.css') }}">
+		<script src="{{ url_for('static', filename='js/jquery.swipebox.min.js') }}"></script>
+		<script type="text/javascript">
+			jQuery(function ($) {
+				$(".swipebox").swipebox();
+			});
+		</script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.mixitup.min.js') }}"></script>
+		<script type="text/javascript">
+			$(function () {
+				var filterList = {
+					init: function () {
+						// MixItUp plugin
+						// http://mixitup.io
+						$('#portfoliolist').mixitup({
+							targetSelector: '.portfolio',
+							filterSelector: '.filter',
+							effects: ['fade'],
+							easing: 'snap',
+							// call the hover effect
+							onMixEnd: filterList.hoverEffect()
+						});
+					},
+					hoverEffect: function () {
+						// Simple parallax effect
+						$('#portfoliolist .portfolio').hover(
+							function () {
+								$(this).find('.label').stop().animate({
+									bottom: 0
+								}, 200, 'easeOutQuad');
+								$(this).find('img').stop().animate({
+									top: -30
+								}, 500, 'easeOutQuad');
+							},
+							function () {
+								$(this).find('.label').stop().animate({
+									bottom: -40
+								}, 200, 'easeInQuad');
+								$(this).find('img').stop().animate({
+									top: 0
+								}, 300, 'easeOutQuad');
+							}
+						);
+					}
+				};
+				// Run the show!
+				filterList.init();
+			});
+		</script>
+	</div>
+</div>
+<div id="contact" class="contact">
+	<div class="container">
+		<h3>CONTACT</h3>
+		<p class="para">Curabitur aliquet quam id dui posuere blandit.
+			<span>Nulla Quis lorum nisl tempus convallis quis ac lactus
+				porttitor accumsan tincidunt.</span></p>
+
+		<div class="contact-contact">
+		<form action="/create" method="POST">
+			<input name="nm" type="text" placeholder="Name">
+			<input name="el" type="text" placeholder="E-mail">
+			<input name="sub" type="text" placeholder="Subject">
+			<textarea name="msg" placeholder="Message"></textarea>
+			<input type="submit" value="SEND MESSAGE">
+		</form>
+		</div>
+	</div>
+</div>	{% endblock %}
